@@ -21,3 +21,24 @@ document.getElementById("no-btn").addEventListener("mouseover", moveButton);
 
 // Обрабатываем касание (для телефонов)
 document.getElementById("no-btn").addEventListener("touchstart", moveButton);
+
+// Функция для создания сердечек
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerText = "❤️";
+    document.querySelector(".hearts-container").appendChild(heart);
+
+    let randomX = Math.random() * window.innerWidth;
+    let duration = Math.random() * 3 + 2;
+
+    heart.style.left = `${randomX}px`;
+    heart.style.animationDuration = `${duration}s`;
+
+    setTimeout(() => {
+        heart.remove();
+    }, duration * 1000);
+}
+
+// Создаем сердечки каждую секунду
+setInterval(createHeart, 1);
