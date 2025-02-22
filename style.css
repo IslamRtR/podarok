@@ -15,6 +15,12 @@ body {
     z-index: 2;
 }
 
+#surprise-btn{
+    z-index: 123;
+    position: absolute;
+    top: 250px;
+}
+
 h1 {
     font-size: 1.8em;
     animation: fadeIn 2s ease-in-out;
@@ -56,12 +62,15 @@ button:hover {
     color: #ff1493;
 }
 
-/* Кнопка 'Жоқ' убегает */
+
 #no-btn {
+    z-index: 123;
     position: absolute;
+    top: 250px;
+    left: 60px;
 }
 
-/* Фон с сердечками */
+
 .hearts-container {
     position: fixed;
     top: 0;
@@ -94,13 +103,5 @@ button:hover {
 
 /* 🌟 Адаптация под мобильные устройства */
 @media (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
 
-    button {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
 }
