@@ -41,4 +41,4 @@ function createHeart() {
 }
 
 // Создаем сердечки каждую секунду
-setInterval(createHeart, 1);
+setInterval(createHeart, 10);
